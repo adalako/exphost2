@@ -10,6 +10,11 @@ var _classCallCheck = require('babel-runtime/helpers/class-call-check')['default
 
 var React = require('react');
 
+var _require = require('react-bootstrap');
+
+var Button = _require.Button;
+var Jumbotron = _require.Jumbotron;
+
 var App = (function (_React$Component) {
   _inherits(App, _React$Component);
 
@@ -23,9 +28,27 @@ var App = (function (_React$Component) {
     key: 'render',
     value: function render() {
       return React.createElement(
-        'p',
+        Jumbotron,
         null,
-        'This is the app'
+        React.createElement(
+          'h1',
+          null,
+          'Hello, world!'
+        ),
+        React.createElement(
+          'p',
+          null,
+          'This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.'
+        ),
+        React.createElement(
+          'p',
+          null,
+          React.createElement(
+            Button,
+            { bsStyle: 'primary' },
+            'Learn more'
+          )
+        )
       );
     }
   }]);
